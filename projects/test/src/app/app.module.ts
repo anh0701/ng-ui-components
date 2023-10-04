@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoreModule } from "../../../core/src/lib/core.module";
+import { MunTreeViewModule } from 'mun-tree-view';
 
 @NgModule({
     declarations: [
@@ -14,7 +14,7 @@ import { CoreModule } from "../../../core/src/lib/core.module";
     imports: [
         BrowserModule,
         AppRoutingModule,
-        CoreModule
+        MunTreeViewModule
     ]
 })
 export class AppModule { }

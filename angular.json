@@ -126,6 +126,72 @@
           }
         }
       }
+    },
+    "mun-core": {
+      "projectType": "library",
+      "root": "projects/mun-core",
+      "sourceRoot": "projects/mun-core/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/mun-core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mun-core/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/mun-core/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/mun-core/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "mun-tree-view": {
+      "projectType": "library",
+      "root": "projects/mun-tree-view",
+      "sourceRoot": "projects/mun-tree-view/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/mun-tree-view/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mun-tree-view/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/mun-tree-view/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/mun-tree-view/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   }
 }

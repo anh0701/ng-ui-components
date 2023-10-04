@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CoreService } from './core.service';
+import { MunTreeViewService } from './mun-tree-view.service';
 
-describe('CoreService', () => {
-  let service: CoreService;
+describe('MunTreeViewService', () => {
+  let service: MunTreeViewService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CoreService);
+    service = TestBed.inject(MunTreeViewService);
   });
 
   it('should be created', () => {

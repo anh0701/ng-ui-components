@@ -6,6 +6,12 @@
     "paths": {
       "core": [
         "dist/core"
+      ],
+      "mun-core": [
+        "dist/mun-core"
+      ],
+      "mun-tree-view": [
+        "dist/mun-tree-view"
       ]
     },
     "outDir": "./dist/out-tsc",
