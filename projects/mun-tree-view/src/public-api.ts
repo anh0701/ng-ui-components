@@ -5,3 +5,4 @@
 export * from './lib/mun-tree-view.service';
 export * from './lib/mun-tree-view.component';
 export * from './lib/mun-tree-view.module';
+export * from './lib/mun-button/mun-button.component';

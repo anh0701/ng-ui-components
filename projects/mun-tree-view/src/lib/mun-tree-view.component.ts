@@ -11,4 +11,5 @@ import { MunTreeViewService } from './mun-tree-view.service';
 })
 export class MunTreeViewComponent {
   constructor(private service: MunTreeViewService){};
+  init = this.service.getItems();
 }

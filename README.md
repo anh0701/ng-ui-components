@@ -14,3 +14,8 @@
 ```sh
     ng [command] --help
 ```
+
+5. generate component specific project
+```sh
+    ng g c [name-component] --project=[name-lib]
+```
