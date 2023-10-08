@@ -5,7 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class MunTreeViewService {
 
-  constructor() { }
-  arrayTree: string[] = [];
+  arrayTree: string[] = ['hoa', 'ngoc', 'hoa'];
   
+  getItems(): string[]{
+    return this.arrayTree;
+  }
 }
