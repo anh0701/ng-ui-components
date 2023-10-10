@@ -1,5 +1,12 @@
-<ul>
-    <li *ngFor="let item of init">{{item}}</li>
+<i class="bi bi-plus-circle" (click)="status = onclick($event)">
+    <input [hidden]="status" [value]="newitem" (input)="newitem = getValue($event)" (keydown)="onkeyDown($event)"/>
+</i>
+<ul *ngFor="let item of init">
+    <li>{{item}}</li>
+    <i class="bi bi-plus-circle" (click)="status = onclick($event)">
+        <input [hidden]="status" [value]="newitem" (input)="newitem = getValue($event)" (keydown)="onkeyDown($event)"/>
+    </i>
 </ul>
+
 
 
