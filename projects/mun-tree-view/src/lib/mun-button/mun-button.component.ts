@@ -8,6 +8,5 @@ import { MunTreeViewService } from '../mun-tree-view.service';
   providers: [MunTreeViewService]
 })
 export class MunButtonComponent {
-  constructor(private service: MunTreeViewService){}
-  ngInit = this.service.getItems();
+
 }
