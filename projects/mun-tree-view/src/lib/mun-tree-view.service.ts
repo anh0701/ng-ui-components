@@ -1,13 +1,24 @@
 import { Injectable } from '@angular/core';
+import { Data } from './data';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MunTreeViewService {
 
-  arrayTree: string[] = [];
+  arrayTree: Data[] = [
+    {
+      value: "Thinh",
+      item: [
+        {
+          value: "deu", 
+          item: []
+        }
+      ]
+    }
+  ];
   
-  getItems(): string[]{
+  getItems(): Data[]{
     return this.arrayTree;
   }
 }

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MunTreeViewService } from './mun-tree-view.service';
+import { Data } from './data';
 
 @Component({
   selector: 'lib-mun-tree-view',
@@ -11,23 +12,15 @@ import { MunTreeViewService } from './mun-tree-view.service';
 })
 export class MunTreeViewComponent {
   constructor(private service: MunTreeViewService){};
-  init = this.service.getItems();
-  newitem = "";
-  status: boolean = true;
+  @Input()
+  data: Data[] = this.service.getItems();
+  hidden: boolean = true
 
-  getValue(event: Event): string {
-    return (event.target as HTMLInputElement).value;
+  showInputClick(){
+    this.hidden = false;
   }
-  onkeyDown(event: KeyboardEvent){
-    if(event.key === "Enter"){
-      this.init.push(this.newitem);
-      this.newitem = '';
-      this.status = true;
-    }
-  }
-  onclick(event:Event): boolean{
-    console.log(this.status);
-    this.status = false;
-    return this.status;
+
+  addInputItem(event: Event){
+    this.data.push({value: (event.target as HTMLInputElement).value, item: []})
   }
 }
