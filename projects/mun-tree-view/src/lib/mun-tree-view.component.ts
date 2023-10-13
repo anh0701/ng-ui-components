@@ -7,20 +7,21 @@ import { Data } from './data';
   templateUrl: './mun-tree-view.component.html',
   styles: [
   ],
-  providers:  [ MunTreeViewService ]
+  providers: [MunTreeViewService]
 
 })
 export class MunTreeViewComponent {
-  constructor(private service: MunTreeViewService){};
+  constructor(private service: MunTreeViewService) { };
   @Input()
   data: Data[] = this.service.getItems();
   hidden: boolean = true
 
-  showInputClick(){
+  showInputClick() {
     this.hidden = false;
   }
 
-  addInputItem(event: Event){
-    this.data.push({value: (event.target as HTMLInputElement).value, item: []})
+  addInputItem(event: Event) {
+    this.data.push({ value: (event.target as HTMLInputElement).value, item: [] })
+    this.hidden = true
   }
 }
