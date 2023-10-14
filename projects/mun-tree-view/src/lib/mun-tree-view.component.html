@@ -1,17 +1,13 @@
 <div class="treeview">
     <ul class="nested">
-        <li  *ngFor="let i of data">
+        <li *ngFor="let i of data">
             {{i.value}}
             <lib-mun-tree-view [data]="i.item" *ngIf="i.item "></lib-mun-tree-view>
         </li>
     </ul>
     <div>
-        <i (click)="showInputClick()" class="bi bi-cloud-plus-fill"></i>
-        <input [hidden]="hidden" type="text" class="input" (keydown.code.enter)="addInputItem($event)">
+        <i (click)="showInputClick(); filterName.value = ''" class="bi bi-cloud-plus-fill"></i>
+        <input #filterName name="filterName" [hidden]="hidden" type="text" class="input"
+            (keydown.code.enter)="addInputItem($event)">
     </div>
 </div>
-
-
-
-
-

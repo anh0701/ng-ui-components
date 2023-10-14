@@ -22,6 +22,6 @@ export class MunTreeViewComponent {
 
   addInputItem(event: Event) {
     this.data.push({ value: (event.target as HTMLInputElement).value, item: [] })
-    this.hidden = true
+    this.hidden = true;
   }
 }
