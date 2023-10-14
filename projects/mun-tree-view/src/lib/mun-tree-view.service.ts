@@ -7,18 +7,18 @@ import { Data } from './data';
 export class MunTreeViewService {
 
   arrayTree: Data[] = [
-    {
-      value: "Thinh",
-      item: [
-        {
-          value: "deu", 
-          item: []
-        }
-      ]
-    }
+    // {
+    //   value: "k",
+    //   item: [
+    //     {
+    //       value: "j",
+    //       item: []
+    //     }
+    //   ]
+    // }
   ];
-  
-  getItems(): Data[]{
+
+  getItems(): Data[] {
     return this.arrayTree;
   }
 }
