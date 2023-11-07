@@ -5,7 +5,8 @@ import { Data } from './data';
 @Component({
   selector: 'lib-mun-tree-view',
   templateUrl: './mun-tree-view.component.html',
-  styles: [
+  styleUrls: [
+    './mun-tree-view.component.css'
   ],
   providers: [MunTreeViewService]
 
